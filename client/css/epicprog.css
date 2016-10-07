@@ -1,0 +1,123 @@
+.groupX {
+	font-size: 16px;
+	margin: 10px 0;
+	padding: 3px 15px 3px 15px;
+	color: rgb(49, 46, 46);
+	background-color: rgba(224, 224, 224, 0.96);
+	text-transform: none;
+	font-weight: 400;
+	min-width: 100px;
+}
+.groupW {
+	font-size: 16px;
+	margin: 5px 0 5px;
+	padding: 3px 15px 3px 15px;
+	color: rgb(49, 46, 46);
+	background-color: rgba(224, 224, 224, 0.96);
+	text-transform: none;
+	font-weight: 400;
+	min-width: 96px;
+	min-height: 96px;
+}
+.md-button.left {
+	border-radius: 10px 0 0 10px;
+}
+.md-button.middle {
+	border-radius: 0;
+	border-left: 1px solid rgba(230, 230, 230, 0.96);
+	border-right: 1px solid rgba(230, 230, 230, 0.96);
+}
+.md-button.right {
+	border-radius: 0 10px 10px 0;
+}
+.md-button:not([disabled])
+:hover {
+	background-color: rgba(193, 193, 193, 0.96);
+	color: rgba(44, 65, 164, 0.96);
+	transition: 0.3s;
+}
+
+.groupY {
+	font-size: 16px;
+	margin: 0 0;
+	padding: 0 0 0 0;
+	color: rgb(49, 46, 46);
+	background-color: rgba(224, 224, 224, 0.96);
+	text-transform: none;
+	font-weight: 400;
+	min-width: 100px;
+}
+.md-button.bottom-left {
+	border-radius: 0 0 0 10px;
+}
+.md-button.bottom-right {
+	border-radius: 0 0 10px 0;
+}
+
+.groupZ {
+	font-size: 16px;
+	margin: 5px 0 5px;
+	padding: 3px 15px 3px 15px;
+	color: rgb(49, 46, 46);
+	background-color: rgba(224, 224, 224, 0.96);
+	text-transform: none;
+	font-weight: 400;
+	min-width: 150px;
+	min-height: 100px;
+}
+.md-button.top {
+	border-radius: 10px 10px 10px 10px;
+	min-width: 300px;
+	min-height: 75px;
+}
+
+.ep-menu .md-fab-top-left {
+	top: 2px;
+	left: 2px;
+}
+
+.groupC {
+	font-size: 48px;
+	margin: 5px 0 5px;
+	padding: 3px 15px 3px 15px;
+	color: rgb(49, 46, 46);
+	background-color: rgba(224, 224, 224, 0.96);
+	text-transform: none;
+	font-weight: 400;
+	min-width: 96px;
+	min-height: 96px;
+	border-radius: 50%;
+}
+
+/*********************
+ * Social Buttons
+ *********************/
+
+.ep-google-plus {
+	color: #fff;
+	background-color: #dd4b39;
+	border: 1px solid #d54331;
+}
+
+/*********************
+ * Card-like div
+ *********************/
+.ep-card {
+	max-width: 350px;
+	text-align: center;
+	border-radius: 10px 10px 10px 10px;
+}
+.ep-card-days {
+	min-width: 325px;
+	min-height: 100px;
+	text-align: left;
+	border-radius: 10px 10px 10px 10px;
+}
+.ep-card-limit {
+	min-width: 72px;
+	min-height: 72px;
+	text-align: center;
+	border-radius: 10px 10px 10px 10px;
+	border-style:dotted;
+}
+

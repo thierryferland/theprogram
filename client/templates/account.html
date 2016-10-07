@@ -1,0 +1,27 @@
+<div class="inset" ng-cloak>	
+	<p></p>
+	  <md-content class="md-no-momentum">
+	    <md-input-container class="md-icon-float md-block">
+	      <!-- Use floating label instead of placeholder -->
+	      <label>Name</label>
+	      <md-icon md-svg-src="images/ic_person_24px.svg" class="name"></md-icon>
+	      <input ng-model="user.username" type="text" ng-blur="putUser()">
+	    </md-input-container>
+	    <md-input-container class="md-block">
+	      <!-- Use floating placeholder instead of label -->
+	      <md-icon md-svg-src="images/ic_email_24px.svg" class="email"></md-icon>
+	      <input ng-model="user.email" type="email" placeholder="Email (required)" ng-required="true" ng-blur="putUser()" disabled>
+	    </md-input-container>
+	    <div layout="row">
+	    	<div layout="row" layout-align="start center">
+	    		<md-icon md-svg-src="images/ic_add_alert_24px.svg" class="email"></md-icon>
+	    	</div>
+	    	<div layout="row" layout-align="start center">
+		        <md-switch class="md-primary" ng-disabled="data.cb1_disabled" ng-model="data.cb1" aria-label="Switch 1" ng-change="change_subscription()">
+		        	Subscription to notifications
+	  			</md-switch>
+  			</div>	
+	    </div>
+	  </md-content>	
+	<p id="message">{{ message }}</p>
+</div>

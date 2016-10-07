@@ -1,0 +1,9 @@
+<md-button ng-hide="islogin" class="md-accent md-raised" aria-label="Sign In" ng-click="login()">
+	Sign In
+</md-button>
+<md-button ng-show="islogin" class="md-primary md-fab md-mini" aria-label="Sign Out" ng-click="logout()" style="padding:0 0;">
+	<md-tooltip md-direction="left" md-visible="tooltipVisible">
+		Sign Out
+	</md-tooltip>
+	<img ng-src="{{data.profilepic}}" style="width:100%; height: 100%;"/>
+</md-button>

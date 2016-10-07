@@ -1,0 +1,39 @@
+<div layout="row"  layout-padding layout-align="center center">
+	<div layout="column" layout-margin  md-whiteframe="3" class="ep-card" md-colors="{background: 'background-50'}" transparent>
+		<h1>Sign Up</h1>
+		<md-input-container class="md-block">
+			<label>Email</label>
+			<md-icon md-svg-src="images/ic_email_24px.svg" class="email"></md-icon>
+			<input type="email" ng-model="user.email" ng-required="true" md-no-asterisk>
+		</md-input-container>
+		<md-input-container class="md-icon-float md-block">
+			<!-- Use floating label instead of placeholder -->
+			<label>Name</label>
+			<md-icon md-svg-src="images/ic_person_24px.svg" class="name"></md-icon>
+			<input ng-model="user.displayName" type="text" ng-required="true" md-no-asterisk>
+		</md-input-container>
+		<md-input-container class="md-icon-float md-block">
+			<!-- Use floating label instead of placeholder -->
+			<label>Password</label>
+			<input ng-model="user.password" type="password" ng-required="true" md-no-asterisk>
+		</md-input-container>
+		<md-input-container class="md-icon-float md-block">
+			<!-- Use floating label instead of placeholder -->
+			<label>Confirm Password</label>
+			<input ng-model="confirmation" type="password" ng-required="true" md-no-asterisk>
+		</md-input-container>
+		<md-button class="md-raised md-accent" ng-click="signup()">
+			Sign Up
+		</md-button>
+		<span>or</span>
+		<md-button class="ep-google-plus" ng-click="authenticate('google')">
+			<md-icon md-svg-src="images/google_plus.svg" md-colors="{fill: 'background-50'}"></md-icon>
+			Sign Up with Google
+		</md-button>
+		<md-divider></md-divider>
+		<span>Already have an account?
+			<md-button ng-click="login()">
+				Sign in
+			</md-button></span>
+	</div>
+</div>

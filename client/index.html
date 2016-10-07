@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html ng-app="epicprog" lang="en-US">
+	<head>
+		<title>The Program</title>
+		<meta charset="utf-8">
+		<meta name="description" content="Web app to monitor and moderate your alcohol intake">
+		<meta name="keywords" content="The Program, drinking with moderation">
+		<meta name="author" content="Thierry Ferland">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<meta name="theme-color" content="#E91E63">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#E91E63">
+
+		<script src="angular/angular.min.js"></script>
+		<script src="satellizer/satellizer.js"></script>
+		<script src="lib/angular-ui-router.min.js"></script>
+		<script src="angular-aria/angular-aria.js"></script>
+		<script src="angular-animate/angular-animate.js"></script>
+		<script src="angular-material/angular-material.js"></script>
+		<link rel="stylesheet" href="angular-material/angular-material.css">
+		<script src="controllers/controllers.js"></script>
+		<script src="app.js"></script>
+		<script src="router.js"></script>
+		<script src="directives.js"></script>
+		<script src="services.js"></script>
+		<script src="controllers/add.js"></script>
+		<script src="controllers/rules.js"></script>
+		<script src="controllers/account.js"></script>
+		<script src="controllers/setup.js"></script>
+		<script src="controllers/signin.js"></script>
+		<script src="controllers/login.js"></script>
+		<script src="controllers/signup.js"></script>
+		<script src="controllers/shame.js"></script>
+		<script src="controllers/histo.js"></script>
+		<script src="controllers/demo.js"></script>
+		<script src="controllers/email.js"></script>
+		<script src="controllers/usercards.js"></script>
+		<script src="controllers/badges.js"></script>
+		<script src="service-worker.js"></script>
+		<link rel="stylesheet" href="css/epicprog.css">
+		<link rel="manifest" href="sw/manifest.json">
+		<link rel="icon" href="images/bottlecap.png" type="image/png">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+	</head>
+	<body>
+		<div layout="column" layout-fill>
+			<header class="ep-menu">
+				<md-toolbar>
+					<div class="md-toolbar-tools">
+						<h2  layout-margin style="margin: 0 0 0 36px;" md-colors="{color: 'background-50'}"><a href="/">The Pr</a></h2>
+						<md-button class="md-icon-button" aria-label="logo" ui-sref="add" layout="column" layout-align="center center" style="position: relative; right: 16px; margin:8px 0 0 0;">
+							<md-icon md-svg-icon="images/bottlecap.svg" md-colors="{fill: 'background-50'}"></md-icon>
+						</md-button>
+						<h2  layout-margin style="position: relative; right: 32px; margin: 0 0 0 0;" md-colors="{color: 'background-50'}"><a href="/">gram</a></h2>
+						<span flex></span>
+						<ep-signin></ep-signin>
+					</div>
+				</md-toolbar>
+				<md-fab-speed-dial md-open="data.MenuIsOpenned" md-direction="down" ng-class="md-flying" class="md-scale md-fab-top-left">
+					<md-fab-trigger>
+						<md-button aria-label="menu" class="md-fab md-mini md-accent">
+							<md-icon md-svg-src="images/ic_menu_48px.svg"></md-icon>
+						</md-button>
+					</md-fab-trigger>
+					<md-fab-actions>
+						<md-button aria-label="Shame" class="md-fab md-raised md-accent md-mini" ui-sref="shame">
+							<md-tooltip md-direction="right" md-visible="tooltipVisible">
+								Shame
+							</md-tooltip>
+							<md-icon md-svg-src="images/ic_videocam_24px.svg" aria-label="Twitter" md-colors="{fill: 'primary'}"></md-icon>
+						</md-button>
+						<md-button aria-label="Account" class="md-fab md-raised md-accent md-mini" ui-sref="account">
+							<md-tooltip md-direction="right" md-visible="tooltipVisible">
+								My Account
+							</md-tooltip>
+							<md-icon md-svg-src="images/ic_account_circle_24px.svg" aria-label="Facebook" md-colors="{fill: 'primary'}"></md-icon>
+						</md-button>
+					</md-fab-actions>
+				</md-fab-speed-dial>
+			</header>
+			<md-content layout="row" flex backbeer>
+				<div flex ui-view></div>
+			</md-content>
+			<footer layout="row" layout-align="center center" md-colors="{background: 'primary', color: 'background-100'}" style="height: 20px;">
+				<p id="copyright">
+					&copy;2016 TFB
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>

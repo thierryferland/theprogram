@@ -1,0 +1,70 @@
+<div transparent>
+	<md-subheader class="md-primary" transparent>
+		<div layout="row">
+			<div flex style="text-align: center;">
+				<md-icon md-svg-icon="images/ic_local_bar_24px.svg"></md-icon>
+				{{current_user.had_today}}
+			</div>
+			<div flex style="text-align: center;">
+				<md-icon md-svg-icon="images/ic_sentiment_satisfied_48px.svg"></md-icon>
+				{{current_user.points}} pts
+			</div>
+		</div>
+	</md-subheader>
+	<md-divider></md-divider>
+	<p></p>
+	<section layout="column">
+		<div layout="row" style="text-align: center;" md-colors="::{color: 'warn'}" layout-align="center center">
+			<md-button class="md-raised md-primary groupW left" ng-click="changeDate(-1)" aria-label="date down">
+				<md-icon style="font-size: 48px; height: 48px;width:48px;" md-svg-icon="images/ic_navigate_before_48px.svg"></md-icon>
+			</md-button>
+			<md-button class="md-raised md-primary groupW middle">
+				{{data.datelabel}}
+			</md-button>
+			<md-button class="md-raised md-primary groupW right" ng-click="changeDate(1)" aria-label="date up">
+				<md-icon style="font-size: 48px; height: 48px;width:48px;" md-svg-icon="images/ic_navigate_next_48px.svg"></md-icon>
+			</md-button>
+		</div>
+		<md-divider></md-divider>
+		<div layout="row" layout-align="center center">
+			<div style="text-align: center;" layout-align="space-around">
+				<md-button class="groupC" aria-label="Had Today">
+					<md-progress-circular ng-hide="ready" md-mode="indeterminate" md-diameter="66px"></md-progress-circular>
+					<span ng-show="ready">{{current_user.had_today}}</span>
+				</md-button>
+			</div>
+		</div>
+		<md-divider></md-divider>
+	</section>
+	<md-divider></md-divider>
+	<section layout="row" layout-align="center center">
+		<md-button class="md-raised groupZ left" ng-click="addDrink(-1)" aria-label="remove drink">
+			<div layout="column">
+				<div>
+					<md-icon md-colors="::{color: 'primary'}" style="font-size: 48px; height: 48px;width:48px;" md-svg-icon="images/ic_remove_circle_48px.svg"></md-icon>
+				</div>
+			</div>
+		</md-button>
+		<md-button class="md-raised groupZ right" ng-click="addDrink(1)" aria-label="add drink">
+			<div layout="column">
+				<div>
+					<md-icon md-colors="::{color: 'primary'}" style="font-size: 48px; height: 48px;width:48px;" md-svg-icon="images/ic_add_circle_48px.svg"></md-icon>
+				</div>
+			</div>
+		</md-button>
+	</section>
+	<section layout="row" layout-align="center center">
+		<md-button class="md-raised groupZ top" ng-click="redeemBadges()" aria-label="Redeem Badges" ng-disabled="!ready">
+			<div layout="column">
+				<div>
+					<md-icon md-colors="::{color: 'primary'}" style="font-size: 48px; height: 48px;width:48px;" md-svg-icon="images/ic_check_circle_48px.svg"></md-icon>
+				</div>
+			</div>
+		</md-button>
+	</section>
+	<md-divider></md-divider>
+	<div layout="row" layout-xs="column" layout-align="center center">
+	<ep-user-card></ep-user-card>
+	</div>
+	<md-divider></md-divider>
+</div>

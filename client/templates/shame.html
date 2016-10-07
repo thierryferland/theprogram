@@ -1,0 +1,30 @@
+<p></p>
+<section layout="column" layout-align="center center" layout-wrap>
+	
+	<p ng-show="myFile">Video is ready to be uploaded</p>
+	<input id="video_to_upload" ng-hide="true" value="Capture" type="file" accept="video/*" aria-label="Select Video" capture file-model="myFile"/>
+	<label for="video_to_upload" ng-hide="myFile" class="md-button md-raised md-accent">Choose File or Use phone cam</label>
+	<label for="video_to_upload" ng-show="myFile" class="md-button md-raised md-accent">Change Video</label>
+	<input id="user_email" name="email" type="hidden"/>
+    <md-button class="md-raised md-accent" ng-show="myFile" ng-click="uploadFile()">Upload Video of Shame</md-button>
+</section>
+<p></p>
+<section layout="column" layout-align="center center">
+  <md-progress-linear md-mode="determinate" value={{progress}}></md-progress-linear>
+</section>
+<p></p>
+<div layout="row" layout-xs="column" layout-align="center center" layout-wrap>
+	<section ng-repeat="url in urls">
+		<md-divider></md-divider>
+		<md-card md-whiteframe="20" md-colors="::{background: 'default-primary-50'}" >
+		  <video controls=""  width="290" src={{url.url}}></video>
+		  <md-card-title>
+	          <md-card-title-text>
+	            <span class="md-headline">Shame by {{url.user_nicknames}}</span>
+	          </md-card-title-text>
+          </md-card-title>
+		</md-card>
+	</section>
+</div>
+
+

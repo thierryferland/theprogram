@@ -1,0 +1,69 @@
+application: theprogramtracker
+version: badges-001
+runtime: python27
+api_version: 1
+threadsafe: false
+
+default_expiration: "30m"
+
+handlers:
+  
+- url: /css
+  static_dir: client/css
+
+- url: /angular
+  static_dir: node_modules/angular
+
+- url: /satellizer
+  static_dir: node_modules/satellizer/dist
+
+- url: /angular-aria
+  static_dir: node_modules/angular-aria
+  
+- url: /angular-animate
+  static_dir: node_modules/angular-animate
+
+- url: /angular-material
+  static_dir: node_modules/angular-material
+
+- url: /material-design-icons
+  static_dir: node_modules/material-design-icons
+
+
+- url: /controllers
+  static_dir: client/controllers
+
+- url: /lib
+  static_dir: client/lib
+
+- url: /sw
+  static_dir: client/sw
+
+- url: /templates
+  static_dir: client/templates
+
+- url: /images
+  static_dir: client/images
+
+- url: /(.*\.js)
+  mime_type: text/javascript
+  static_files: client/\1
+  upload: client/(.*\.js)
+
+- url: /_ah/spi/.*
+  script: api.app
+
+- url: /send_reminder
+  script: server/main.py
+  login: admin
+ 
+- url: /.*
+  script: server/main.py
+  secure: optional
+
+  
+libraries:
+- name: endpoints
+  version: 1.0
+- name: webapp2
+  version: latest

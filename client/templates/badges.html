@@ -1,0 +1,10 @@
+<div layout="row"  layout-padding layout-align="center center">
+	<div layout="column" layout-margin>
+		<h1 style="text-align:center;">New Badges!</h1>
+		<md-chips ng-model="user_badges" md-removable="false">
+			<md-chip-template md-colors="{fill: 'accent-A400'}">
+				<span> <strong>{{$chip.badge}}</strong> <em>({{$chip.points}} pts)</em> </span>
+			</md-chip-template>
+		</md-chips>
+	</div>
+</div>

@@ -1,0 +1,4 @@
+cron:
+- description: daily drink entry mail
+  url: /send_reminder
+  schedule: every day 17:00
